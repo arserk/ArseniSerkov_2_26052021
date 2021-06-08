@@ -12,9 +12,9 @@ body { /*Applied custom font 'Raleway'*/
 	font-family: 'raleway', Arial, Helvetica, sans-serif;
 }
 
-/* General page layout options */
+/*### General page layout options ###*/
 
-.flex_bloc {
+.flex-container {
 	display: flex;
 }
 
@@ -23,20 +23,42 @@ header, #page {
 }
 
 h1 {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-weight: bolder;
 }
 
-strong {
-	font-size: 1.2em;
+h2 {
+	font-size: 1em;
 	font-weight: bold;
 }
 
-/*## Header layout ##*/
+/*TEMPORAIRE!!*/
+img {
+	max-width: 200px;
+	max-height: 200px;
+}
+/*TEMPORAIRE!!*/
+
+/*icons*/
+
+.filtre-i {
+	color: #0065FC;
+}
+
+.star-blue {
+	color: #0065FC;
+	font-size: 0.9em;
+}
+
+.star-lgray {
+	color: lightgray;
+	font-size: 0.9em;
+}
+
+/*######### Header layout #########*/
 
 #header_top {
 	justify-content: flex-end;
-	
 }
 
 #logo {
@@ -88,7 +110,7 @@ form label {
 }
 
 input[type=search] {
-	color: white;
+	color: black;
 	position: relative;
 	right: 5px;
 }
@@ -111,6 +133,8 @@ input[type=submit] {
 /* "Filtres" buttons */
 
 #filtres {
+	font-size: 1.1em;
+	font-weight: bold;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 }
@@ -119,24 +143,100 @@ input[type=submit] {
 	flex-wrap: wrap;
 }
 
-#filtres div[class="filtre_elem"] {
+#filtres div.filtre_elem{
 	border: 2px solid red;
 }
 
-#filtres div[class="filtre_elem"]:hover {
+#filtres div.filtre_elem:hover {
 	border: 2px solid black;
 }
 
-/*## Page layout ##*/
+/*######### Page layout #########*/
 
-/*Content*/
-
-aside {
-	flex: 0 1 auto;
-	order: 1;
+section * {
+	text-decoration: none;
 }
 
-/*## Footer layout ##*/
+#activites, #hebergements{
+	flex-direction: column;
+}
+
+#block_page_1 {
+	flex-wrap: wrap-reverse;
+}
+
+/* Section "Les plus populaires */
+
+#plus_populaire {
+	background-color: #F2F2F2;
+	flex-direction: column;
+	padding: 15px;
+	border: 1px solid red;
+}
+
+#titre, #titre h1 {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+i[class="fas fa-chart-line"] {
+	margin-left: 100px;
+}
+
+.cell-1 {
+	margin: 20px;
+	padding: 25px;
+	border: 1px solid blue;
+}
+
+#plus_populaire img {
+	max-width: 300px;
+}
+
+.image-crop1 {
+	float: left;
+	border-radius: 20px 0px 0px 20px;
+	max-width: 120px;
+	overflow: hidden;
+	text-indent: -40px;
+}
+
+/*Section "Hébergements à Marseille */
+
+#hebergements {
+	max-width: 70%;
+	border: 1px solid red;
+}
+
+#hebergements_cells {
+	flex-wrap: wrap;
+}
+
+.cell-2 {
+	margin: 20px;
+	padding: 25px;
+	border: 1px solid blue;
+}
+
+/* Section "Activités à Marseille" */
+
+#activites {
+	border: 1px solid red;
+}
+
+#activites_cells {
+	flex-wrap: wrap;
+	
+}
+
+.cell-3 {
+	margin: 20px;
+	padding: 25px;
+	border: 1px solid blue;
+}
+
+
+/*######### Footer layout #########*/
 
 footer {
 	background-color:#F2F2F2;
@@ -168,7 +268,7 @@ footer {
 
 
 
-/*## Moblie  rules ##
+/*######### Moblie  rules #########
 ##work in progress
 */
 @media (max-width: 1024px) {

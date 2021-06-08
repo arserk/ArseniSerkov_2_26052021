@@ -4,29 +4,64 @@
 	<meta charset="utf-8">
 	<title>Reservia</title>
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="P2_ressources/fontawesome-free-5.15.3-web/css/all.css" />
+	<script src="https://kit.fontawesome.com/42b4c7ff33.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<div id="header_and_page">
-		<header> <!--logo=link to homepage / edit 'href' ?-->
+	<header>
+		<div id="header_top" class ="flex_bloc" >
+			<!--logo=link to homepage / edit 'href' ?-->
 			<a id="logo" href="index.html"><img src="images/logo/Reservia.svg" alt="Logo Reservia"></a>
 			<a id="subscribe" href=""><p>S'inscrire</p></a> <!--subsribe=link to appropriate page-->
 			<nav>
 				<ul>
-					<li><a href="#">Hébergements</a></li>
-					<li><a href="#">Activités</a></li>
+					<li><a href="#hebergements">Hébergements</a></li>
+					<li><a href="#activites">Activités</a></li>
 				</ul>
 			</nav>
-		</header>
+		</div>
 		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>
 		<form method="post" acton="process.php">
-			<p>
-				<label></label>
-				<input type="search" name="city" id="search_city" placeholder="Marseille,France" />
-			</p>
-			<input type="submit" idvalue="Recherche" />
+			<div>
+				<label><span class="fas fa-map-marker-alt"></span></label>
+				<input type="search" name="city" id="search_city" placeholder="Marseille, France" />
+				<input type="submit" value="Recherche" />
+			</div>
 		</form>
+		
+		<div id="filtres" class="flex_bloc">
+			<div><p><strong>Filtres</strong></p></div>
+			<div class="flex_bloc">
+				<div class="filtre_elem"><p><i class="fas fa-money-bill-wave"></i><strong>Économique</strong></p></div>
+				<div class="filtre_elem"><p><i class="fas fa-child"></i><strong>Familial</strong></p></div>
+				<div class="filtre_elem"><p><i class="fas fa-heart"></i><strong>Romantique</strong></p></div>
+				<div class="filtre_elem"><p><i class="fas fa-dog"></i><strong>Animaux autorisés</strong></p></div>
+			</div>
+		</div>
+		<p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+	</header>
+	
+	<div id="page">
+		<!--icons code-->
+		<i class="fas fa-search"></i>
+		<i class="fas fa-star"></i>
+		<i class="fas fa-chart-line"></i>
+		<!--##########-->
+		<div class="flex_bloc">
+			<aside>
+				<h1>Les plus populaires</h1>
+			</aside>
+			<section id="hebergements">
+				<h1>Hébergements à Marseille</h1>
+				<!--en construction-->
+			</section>
+		</div>
+		<section id="activites">
+			<h1>Activités à Marseille</h1>
+			<!--en construction-->
+		</section>
 	</div>
 	<footer>
 		<!--Add appropriate destination pages in Links-->

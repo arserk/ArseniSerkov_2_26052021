@@ -12,6 +12,7 @@ body { /*Applied custom font 'Raleway'*/
 	font-family: 'raleway', Arial, Helvetica, sans-serif;
 }
 
+
 /*### General page layout options ###*/
 
 .flex-container {
@@ -39,7 +40,7 @@ img {
 }
 /*TEMPORAIRE!!*/
 
-/*icons*/
+/*icon mods*/
 
 .filtre-i {
 	color: #0065FC;
@@ -54,6 +55,7 @@ img {
 	color: lightgray;
 	font-size: 0.9em;
 }
+
 
 /*######### Header layout #########*/
 
@@ -75,6 +77,7 @@ img {
 }
 
 /* Top Navigation menu */
+
 nav {
 	position: relative;
 	top: -46px;
@@ -100,28 +103,41 @@ nav a:hover {
 	border-color: #0065FC;
 }
 
-
 /* Search box */
 
 form label {
+	font-size: 0.8em;
 	background-color: #F2F2F2;
-	padding: 5px 10px 5px 10px;
-	border: 1px solid red;
+	padding: 10px 12px 10px 12px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+input {
+	height: 35px;
 }
 
 input[type=search] {
 	color: black;
+	padding-left: 15px;
+	box-sizing: border-box;
+	border: 1px solid #F2F2F2;
 	position: relative;
 	right: 5px;
+}
+
+input[type=search]:focus {
+	outline: none;
 }
 
 input[type=submit] {
 	color: white;
 	background-color: #0065FC;
+	border: none;
+	border-radius: 0px 10px 10px 0px;
+	padding: 0px 15px 0px 15px;
 	position: relative;
 	right: 10px;
 }
-
 
 ::placeholder {
 	color: black;
@@ -133,25 +149,65 @@ input[type=submit] {
 /* "Filtres" buttons */
 
 #filtres {
-	font-size: 1.1em;
+	font-size: 1em;
 	font-weight: bold;
 	justify-content: flex-start;
 	flex-wrap: wrap;
+	margin-top: 20px;
+	align-items: center;
+}
+
+#filtres :nth-child(1) {
+	margin-right: 10px;
 }
 
 #filtres div {
 	flex-wrap: wrap;
 }
 
-#filtres div.filtre_elem{
-	border: 2px solid red;
+#filtres div.filtre-cell {
+	margin: 10px 20px 10px 0px;
+	border-radius: 50px;
+	padding: 2px 12px 2px 0px;
+	border: 2px solid lightgray;
 }
 
-#filtres div.filtre_elem:hover {
+#filtres div.filtre-cell:hover {
+	background-color: #0065FC;
+	color: white;
 	border: 2px solid black;
 }
 
+.filtre-cell i {
+	margin-right: 10px;
+	color: #0065FC;
+	font-size: 0.8em;
+	border-radius: 50%;
+	padding: 5px 9px 5px 9px;
+	background-color: #DEEBFF;
+}
+
+/* 'info' icon */
+
+#i-icon {
+	align-items: center;
+}
+
+i[class="fas fa-info"] {
+	margin-right: 10px;
+	color: #0065FC;
+	font-size: 0.8em;
+	border-radius: 50%;
+	padding: 5px 9px 5px 9px;
+	border: 1px solid lightgray;
+	position: relative;
+	bottom: 2px;
+}
+
+
 /*######### Page layout #########*/
+
+/* general */
 
 section * {
 	text-decoration: none;
@@ -165,7 +221,13 @@ section * {
 	flex-wrap: wrap-reverse;
 }
 
-/* Section "Les plus populaires */
+.cell-1, .cell-2, .cell-3 {
+	background-color: white;
+	border-radius: 25px;
+	box-shadow: 5px 5px 25px lightgray;
+}
+
+/* Section "Les plus populaires" */
 
 #plus_populaire {
 	background-color: #F2F2F2;
@@ -201,7 +263,7 @@ i[class="fas fa-chart-line"] {
 	text-indent: -40px;
 }
 
-/*Section "Hébergements à Marseille */
+/*Section "Hébergements à Marseille" */
 
 #hebergements {
 	max-width: 70%;
@@ -226,7 +288,6 @@ i[class="fas fa-chart-line"] {
 
 #activites_cells {
 	flex-wrap: wrap;
-	
 }
 
 .cell-3 {
@@ -269,7 +330,7 @@ footer {
 
 
 /*######### Moblie  rules #########
-##work in progress
+##work in progress##
 */
 @media (max-width: 1024px) {
 	

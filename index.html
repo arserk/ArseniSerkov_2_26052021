@@ -23,26 +23,31 @@
 		</div>
 		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 		<p>En plein centre ville ou en pleine nature</p>
+		<!--search form non-functional-->
 		<form method="post" acton="process.php">
 			<div>
 				<label><span class="fas fa-map-marker-alt"></span></label>
 				<input type="search" name="city" id="search_city" placeholder="Marseille, France" />
-				<input type="submit" value="Recherche" />
+				<input type="submit" value="Rechercher" />
 			</div>
 		</form>
-		
+		<!--filters non-functional /can add more filters "filtre-cell"-->
 		<div id="filtres" class="flex-container">
 			<div><p>Filtres</p></div>
 			<div class="flex-container">
-				<div class="filtre_elem"><p><i class="fas fa-money-bill-wave filtre-i"></i>Économique</p></div>
-				<div class="filtre_elem"><p><i class="fas fa-child filtre-i"></i>Familial</p></div>
-				<div class="filtre_elem"><p><i class="fas fa-heart filtre-i"></i>Romantique</p></div>
-				<div class="filtre_elem"><p><i class="fas fa-dog filtre-i"></i>Animaux autorisés</p></div>
+				<div class="filtre-cell"><p><i class="fas fa-money-bill-wave filtre-i"></i>Économique</p></div>
+				<div class="filtre-cell"><p><i class="fas fa-child filtre-i"></i>Familial</p></div>
+				<div class="filtre-cell"><p><i class="fas fa-heart filtre-i"></i>Romantique</p></div>
+				<div class="filtre-cell"><p><i class="fas fa-dog filtre-i"></i>Animaux autorisés</p></div>
 			</div>
 		</div>
-		<p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+		<div id="i-icon" class="flex-container">
+			<i class="fas fa-info"></i>
+			<p></i>Plus de 500 logements sont disponibles dans cette ville</p>
+		</div>
 	</header>
 	
+	<!--Links for -->
 	<div id="page">
 		<div id="block_page_1" class="flex-container">
 			<section id="hebergements" class="flex-container">

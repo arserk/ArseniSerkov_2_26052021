@@ -241,8 +241,8 @@ section * {
 #plus_populaires {
 	background-color: #F2F2F2;
 	flex-direction: column;
-	max-width: 600px;
 	padding: 15px;
+	max-width: 600px;
 	border: 1px solid red;
 }
 
@@ -293,8 +293,8 @@ i[class="fas fa-chart-line"] {
 /*Section "Hébergements à Marseille" */
 
 #hebergements {
-	max-width: 60%;
 	padding: 20px 20px 20px 30px;
+	max-width: 65%;
 	border: 1px solid red;
 }
 
@@ -355,21 +355,27 @@ i[class="fas fa-chart-line"] {
 .column {
 	flex-direction: column;
 	max-width: 25%;
-	height: 600px;
+	height: 450px;
 }
 
 .image-crop3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 25px;
+	height: 80%;
 	overflow: hidden;
 }
 
-/*attention ! valeur modif,  EN CONSTRUCT*/
-.image-crop3 img {
+.img-wide {
 	max-width: 100%;
 	height: auto;
+}
+
+#activites h2 {
+	display: block;
+	height: 50px;
+	margin: 0;
+	border: 1px solid green;
 }
 
 /*######### Footer layout #########*/
@@ -407,20 +413,38 @@ footer {
 /*######### Moblie  rules #########
 ##work in progress##
 */
-@media (max-width: 1024px) {
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	#hebergements {
+		max-width: 100%;
+	}
+	#plus_populaires {
+		max-width: 100%;
+	}
 	footer {
 		flex-direction: column;
 	}
 }
 
-@media (max-width: 600px) {
-	.column {
-		flex: 100%;
-		max-width: 100%;
-	}
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
 	
 }
 
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {
+	.cell-2 {
+		width: fit-content;
+	}
+}
 
 /* A rajoutter:
 

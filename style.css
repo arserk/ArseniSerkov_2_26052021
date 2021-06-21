@@ -207,10 +207,6 @@ i[class="fas fa-info"] {
 
 /* general */
 
-#page {
-	margin: 20px 5% 0px 5%;
-}
-
 section {
 	border-radius: 25px;
 }
@@ -220,15 +216,20 @@ section * {
 	color: black;
 }
 
-#activites, #hebergements{
+#activites, #hebergements, #plus_populaires {
 	flex-direction: column;
 }
 
 #block_page_1 {
+	margin: 20px 5% 0px 5%;
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 }
 
+/*# cells for each respective section =
+"Plus Populaires" > cell-1
+"Hebergements à Marseille" > cell-2
+"Activités à Marseille" > cell-3 */
 .cell-1, .cell-2, .cell-3 {
 	background-color: white;
 	border-radius: 25px;
@@ -236,35 +237,33 @@ section * {
 	overflow: hidden;
 }
 
-/* Section "Les plus populaires" */
+/* Section (1) "Les plus populaires" */
 
 #plus_populaires {
 	background-color: #F2F2F2;
 	width: 30%;
-	flex-direction: column;
-	padding: 15px 15px 15px 30px;
-	border: 1px solid red;
+	padding: 15px 20px 15px 30px;
+}
+
+#titre {
+	justify-content: space-between;
+}
+
+i[class="fas fa-chart-line"] {
+	font-size: 1.5em;
+	position: relative;
+	right: 25px;
+	top: 20px
 }
 
 #populaires_cells {
 	flex-direction: column;
 }
 
-#titre, #titre h1 {
-	display: inline-block;
-	white-space: nowrap;
-	margin: 15px auto 10px 0px;
-}
-
-i[class="fas fa-chart-line"] {
-	margin-left: 190px;
-	font-size: 1.5em;
-}
-
 .cell-1 {
 	margin: 20px 10px 20px 0px;
 	padding: 6px;
-	min-width: 250px;
+	min-width: 260px;
 	width: 95%;
 }
 
@@ -286,16 +285,16 @@ i[class="fas fa-chart-line"] {
 	max-width: 260px;
 }
 
-.cell-1 i {
-	position: relative;
+#populaires_cells i {
+	margin-top: 6ex;
 }
 
-/*Section "Hébergements à Marseille" */
+/*Section (2) "Hébergements à Marseille" */
 
 #hebergements {
-	padding: 20px 10px 20px 30px;
+	background-color: #F2F2F2;
+	padding: 20px 10px 20px 20px;
 	width: 60%;
-	border: 1px solid red;
 }
 
 #hebergements_cells {
@@ -335,11 +334,20 @@ i[class="fas fa-chart-line"] {
 	left: 12px;
 }
 
-/* Section "Activités à Marseille" */
+#hebergements h2 {
+	margin-top: 1.5em;
+}
+
+/* Section (3) "Activités à Marseille" */
 
 #activites {
 	margin-top: 25px;
+	padding: 0px 4% 0px 4%;
 	border: 1px solid red;
+}
+
+#activites h1 {
+	margin-left: 15px;
 }
 
 #activites_cells {
@@ -347,7 +355,9 @@ i[class="fas fa-chart-line"] {
 }
 
 .cell-3 {
-	margin: 5px;
+	display: flex;
+	flex-direction: column;
+	margin: 15px;
 	padding: 0;
 	border: 1px solid blue;
 }
@@ -362,7 +372,7 @@ i[class="fas fa-chart-line"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 80%;
+	height: fit-content;
 	overflow: hidden;
 }
 
@@ -374,6 +384,8 @@ i[class="fas fa-chart-line"] {
 #activites h2 {
 	display: block;
 	height: 50px;
+	min-height: 50px;
+	max-height: 50px;
 	margin: 0;
 	border: 1px solid green;
 }
@@ -385,7 +397,8 @@ footer {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
-	padding: 5%;
+	padding: 2em 5% 3% 5%;
+	margin-top: 3em;
 }
 
 .foot-list {
@@ -409,33 +422,53 @@ footer {
 }
 
 
-/*######### Moblie  rules #########
-##work in progress##
-*/
+/*######### Responsive  rules #########
 
 /* Small devices (landscape phones, less than 768px) */
 
 @media (max-width: 767.98px) {
-	.column {
-		max-width: 100%;
+	#block_page_1 {
+		margin: 0;
 	}
-	footer {
-		flex-direction: column;
+	section {
+		border-radius: 0;
+	}
+	
+	#hebergements {
+		background-color: white;
 	}
 	.cell-2 {
 		width: 100%;
 	}
-	.cell-3 {
-		height: 300px;
+	#activites {
+		margin-top: 0;
+		padding: 15px 15px 0px 15px;
 	}
+	.column {
+		max-width: 100%;
+		height: fit-content;
+	}
+	.cell-3 {
+		height: 260px;
+		margin-top: 25px;
+	}
+	footer {
+		flex-direction: column;
+	}
+	
 }
 
 /* Medium devices (tablets, between 992px and 768px) */
 
 @media (max-width: 991.98px) and (min-width: 768px) {
-	
+	#hebergements {
+		margin-top: 20px;
+	}
 	.cell-2 {
 		width: 45%;
+	}
+	.column {
+		max-width: 50%;
 	}
 }
 
@@ -444,9 +477,15 @@ footer {
 	#populaires_cells {
 		flex-direction: row;
 	}
+	#populaires_cells i {
+		margin-top: 1.5em;
+	}
+	#hebergements {
+		margin-top: 25px;
+	}
 }
 
-/* Large devices (desktops, less than 1200px) */
+/* Devices (desktops, tablets, less than 1200px) */
 @media (max-width: 1199.98px) {
 	#hebergements {
 		width: 100%;
@@ -455,13 +494,3 @@ footer {
 		width: 100%;
 	}
 }
-
-/* A rajoutter:
-
-regle- Hebergements cell-2 prennent 90% de la taille,
-regle- section Hebergement prends plus de 60%
-
-regle- changer la marge quand ca flex (entre populaires et hebergement)
-regle- changer couleur fond Hebergement quand flex
-
-*/

@@ -240,16 +240,20 @@ section * {
 
 #plus_populaires {
 	background-color: #F2F2F2;
+	width: 30%;
 	flex-direction: column;
-	padding: 15px;
-	max-width: 600px;
+	padding: 15px 15px 15px 30px;
 	border: 1px solid red;
+}
+
+#populaires_cells {
+	flex-direction: column;
 }
 
 #titre, #titre h1 {
 	display: inline-block;
 	white-space: nowrap;
-	margin: 15px auto 10px 12px;
+	margin: 15px auto 10px 0px;
 }
 
 i[class="fas fa-chart-line"] {
@@ -258,16 +262,17 @@ i[class="fas fa-chart-line"] {
 }
 
 .cell-1 {
-	margin: 20px;
+	margin: 20px 10px 20px 0px;
 	padding: 6px;
-	width: 400px;
-	height: 160px;
+	min-width: 250px;
+	width: 95%;
 }
 
 .image-crop1 {
 	float: left;
 	border-radius: 20px 0px 0px 20px;
-	width: 150px;
+	width: 40%;
+	max-width: 175px;
 	height: 160px;
 	overflow: hidden;
 	display: flex;
@@ -281,20 +286,15 @@ i[class="fas fa-chart-line"] {
 	max-width: 260px;
 }
 
-.cell-1  h2, .cell-1  p {
-	margin-right: 60px;
-}
-
 .cell-1 i {
 	position: relative;
-	top: 30px;
 }
 
 /*Section "Hébergements à Marseille" */
 
 #hebergements {
-	padding: 20px 20px 20px 30px;
-	max-width: 65%;
+	padding: 20px 10px 20px 30px;
+	width: 60%;
 	border: 1px solid red;
 }
 
@@ -305,8 +305,8 @@ i[class="fas fa-chart-line"] {
 .cell-2 {
 	margin: 20px 20px 20px 0px;
 	padding: 5px;
-	width: 30%;
-	min-width: 250px;
+	width: 29%;
+	min-width: 240px;
 }
 
 .image-crop2 {
@@ -409,7 +409,6 @@ footer {
 }
 
 
-
 /*######### Moblie  rules #########
 ##work in progress##
 */
@@ -418,31 +417,42 @@ footer {
 
 @media (max-width: 767.98px) {
 	.column {
-		flex: 100%;
-		max-width: 100%;
-	}
-	#hebergements {
-		max-width: 100%;
-	}
-	#plus_populaires {
 		max-width: 100%;
 	}
 	footer {
 		flex-direction: column;
 	}
+	.cell-2 {
+		width: 100%;
+	}
+	.cell-3 {
+		height: 300px;
+	}
 }
 
-/* Medium devices (tablets, less than 992px) */
+/* Medium devices (tablets, between 992px and 768px) */
 
-@media (max-width: 991.98px) {
+@media (max-width: 991.98px) and (min-width: 768px) {
 	
+	.cell-2 {
+		width: 45%;
+	}
+}
+
+/* large devices (desktops, betwwen 1200px and 992px) */
+@media (max-width: 1199.98px) and (min-width: 992px) {
+	#populaires_cells {
+		flex-direction: row;
+	}
 }
 
 /* Large devices (desktops, less than 1200px) */
-
 @media (max-width: 1199.98px) {
-	.cell-2 {
-		width: fit-content;
+	#hebergements {
+		width: 100%;
+	}
+	#plus_populaires {
+		width: 100%;
 	}
 }
 

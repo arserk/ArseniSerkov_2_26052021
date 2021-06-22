@@ -366,7 +366,7 @@ i[class="fas fa-chart-line"] {
 	flex-direction: column;
 	justify-content: space-between;
 	max-width: 25%;
-	height: 500px;
+	height: 550px;
 }
 
 .image-crop3 {
@@ -474,7 +474,7 @@ footer {
 	}
 	.column {
 		max-width: 100%;
-		height: fit-content;
+		height: min-content;
 	}
 	.cell-3 {
 		height: 220px;
@@ -514,6 +514,9 @@ footer {
 	}
 	#hebergements {
 		margin-top: 25px;
+	}
+	.column {
+		height: 420px;
 	}
 }
 

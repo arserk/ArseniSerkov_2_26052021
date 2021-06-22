@@ -7,11 +7,9 @@
 	font-style: normal;
 }
 
-
 body { /*Applied custom font 'Raleway'*/
 	font-family: 'raleway', Arial, Helvetica, sans-serif;
 }
-
 
 /*### General page layout options ###*/
 
@@ -57,6 +55,7 @@ header {
 
 #header_top {
 	justify-content: flex-end;
+	flex-wrap: wrap-reverse;
 }
 
 #logo {
@@ -76,22 +75,18 @@ header {
 
 nav {
 	position: relative;
-	top: -46px;
-	margin-right: 20px;
-}
-
-nav ul {
-	list-style-type: none;
-	display: flex;
+	bottom: 32px;
+	right: 20px;
 }
 
 nav a {
+	position: relative;
+	top: 2px;
 	text-decoration: none;
 	color: black;
-	display: block;
-	width: 100px;
-	padding: 46px 45px 5px 45px;
-	border-top: 2px solid transparent;
+	text-align: center;
+	padding: 43px 45px 20px 45px;
+	border-top: 3px solid transparent;
 }
 
 nav a:hover {
@@ -433,6 +428,20 @@ footer {
 /* Small devices (landscape phones, less than 768px) */
 
 @media screen and (max-width: 767.98px) {
+	/*header*/
+	#header_top nav {
+		position: initial;
+		width: 112%;
+		margin-left: -6%;
+		margin-right: -6%;
+		justify-content: space-around;
+	}
+	nav a {
+		width: 50%;
+		padding: 20px;
+		border-top: none;
+		border-bottom: 3px solid #F2F2F2;
+	}
 	button#search_text {
 		display: none;
 	}
@@ -442,14 +451,13 @@ footer {
 		position: relative;
 		right: 15px;
 	}
-	
+	/*page sections*/
 	#block_page_1 {
 		margin: 0;
 	}
 	section {
 		border-radius: 0;
 	}
-	
 	#hebergements {
 		background-color: white;
 	}
@@ -471,6 +479,7 @@ footer {
 		height: 260px;
 		margin-top: 25px;
 	}
+	/*footer*/
 	footer {
 		flex-direction: column;
 	}

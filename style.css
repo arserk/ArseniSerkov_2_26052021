@@ -15,6 +15,10 @@ body { /*Applied custom font 'Raleway'*/
 
 /*### General page layout options ###*/
 
+body {
+	min-width: 350px;
+}
+
 .flex-container {
 	display: flex;
 }
@@ -44,7 +48,6 @@ h2 {
 	color: lightgray;
 	font-size: 0.8em;
 }
-
 
 /*######### Header layout #########*/
 
@@ -122,12 +125,12 @@ input[type=search]:focus {
 	outline: none;
 }
 
-input[type=submit] {
+button[type=submit] {
 	color: white;
 	background-color: #0065FC;
 	border: none;
 	border-radius: 0px 10px 10px 0px;
-	padding: 0px 15px 0px 15px;
+	padding: 10px;
 	position: relative;
 	right: 10px;
 }
@@ -137,6 +140,10 @@ input[type=submit] {
 	font-weight: bold;
 	font-family: 'railway';
 	opacity: 1; /* for Firefox */
+}
+
+#search_icon {
+	display: none;
 }
 
 /* "Filtres" buttons */
@@ -216,7 +223,7 @@ section * {
 	color: black;
 }
 
-#activites, #hebergements, #plus_populaires {
+#activites, #hebergements, #populaires {
 	flex-direction: column;
 }
 
@@ -239,9 +246,9 @@ section * {
 
 /* Section (1) "Les plus populaires" */
 
-#plus_populaires {
+#populaires {
 	background-color: #F2F2F2;
-	width: 30%;
+	width: 32%;
 	padding: 15px 20px 15px 30px;
 }
 
@@ -263,7 +270,7 @@ i[class="fas fa-chart-line"] {
 .cell-1 {
 	margin: 20px 10px 20px 0px;
 	padding: 6px;
-	min-width: 260px;
+	min-width: 255px;
 	width: 95%;
 }
 
@@ -277,7 +284,7 @@ i[class="fas fa-chart-line"] {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-right: 20px;
+	margin-right: 5%;
 }
 
 .image-crop1 img {
@@ -343,7 +350,6 @@ i[class="fas fa-chart-line"] {
 #activites {
 	margin-top: 25px;
 	padding: 0px 4% 0px 4%;
-	border: 1px solid red;
 }
 
 #activites h1 {
@@ -359,7 +365,6 @@ i[class="fas fa-chart-line"] {
 	flex-direction: column;
 	margin: 15px;
 	padding: 0;
-	border: 1px solid blue;
 }
 
 .column {
@@ -382,12 +387,13 @@ i[class="fas fa-chart-line"] {
 }
 
 #activites h2 {
-	display: block;
+	display: flex;
 	height: 50px;
 	min-height: 50px;
 	max-height: 50px;
 	margin: 0;
-	border: 1px solid green;
+	align-items: center;
+	padding-left: 15px;
 }
 
 /*######### Footer layout #########*/
@@ -426,7 +432,17 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 
-@media (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
+	button#search_text {
+		display: none;
+	}
+	button#search_icon {
+		display: inline-block;
+		border-radius: 10px;
+		position: relative;
+		right: 15px;
+	}
+	
 	#block_page_1 {
 		margin: 0;
 	}
@@ -439,6 +455,9 @@ footer {
 	}
 	.cell-2 {
 		width: 100%;
+	}
+	#populaires_cells i {
+		margin-top: 9%;
 	}
 	#activites {
 		margin-top: 0;
@@ -474,6 +493,9 @@ footer {
 
 /* large devices (desktops, betwwen 1200px and 992px) */
 @media (max-width: 1199.98px) and (min-width: 992px) {
+	#populaires {
+		padding: 15px 2% 15px 2%;
+	}
 	#populaires_cells {
 		flex-direction: row;
 	}
@@ -485,12 +507,12 @@ footer {
 	}
 }
 
-/* Devices (desktops, tablets, less than 1200px) */
+/* Devices (desktops, tablets... less than 1200px) */
 @media (max-width: 1199.98px) {
 	#hebergements {
 		width: 100%;
 	}
-	#plus_populaires {
+	#populaires {
 		width: 100%;
 	}
 }

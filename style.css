@@ -364,8 +364,9 @@ i[class="fas fa-chart-line"] {
 
 .column {
 	flex-direction: column;
+	justify-content: space-between;
 	max-width: 25%;
-	height: 450px;
+	height: 500px;
 }
 
 .image-crop3 {
@@ -476,7 +477,7 @@ footer {
 		height: fit-content;
 	}
 	.cell-3 {
-		height: 260px;
+		height: 220px;
 		margin-top: 25px;
 	}
 	/*footer*/

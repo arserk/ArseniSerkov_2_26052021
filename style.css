@@ -295,7 +295,7 @@ i[class="fas fa-chart-line"] {
 
 #hebergements {
 	background-color: #F2F2F2;
-	padding: 20px 10px 20px 20px;
+	padding: 20px 0px 20px 30px;
 	width: 60%;
 }
 
@@ -339,6 +339,7 @@ i[class="fas fa-chart-line"] {
 #hebergements h2 {
 	margin-top: 1.5em;
 }
+
 
 /* Section (3) "Activités à Marseille" */
 
@@ -428,7 +429,7 @@ footer {
 
 /* Small devices (landscape phones, less than 768px) */
 
-@media screen and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
 	/*header*/
 	#header_top nav {
 		position: initial;
@@ -459,7 +460,12 @@ footer {
 	section {
 		border-radius: 0;
 	}
+	#populaires {
+		padding: 5%;
+	}
+
 	#hebergements {
+		padding: 5%;
 		background-color: white;
 	}
 	.cell-2 {
@@ -470,7 +476,7 @@ footer {
 	}
 	#activites {
 		margin-top: 0;
-		padding: 15px 15px 0px 15px;
+		padding: 15px 15px 0px 2%;
 	}
 	.column {
 		max-width: 100%;
@@ -483,6 +489,7 @@ footer {
 	/*footer*/
 	footer {
 		flex-direction: column;
+		padding-left: 2.5em;
 	}
 	
 }

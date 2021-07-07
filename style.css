@@ -485,7 +485,8 @@ footer {
 	}
 
 	#hebergements {
-		padding: 5%;
+		padding-left: 5%;
+		padding-right: 2%;
 		background-color: white;
 	}
 	.cell-2 {

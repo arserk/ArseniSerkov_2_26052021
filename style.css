@@ -15,18 +15,19 @@ body { /*Applied custom font 'Raleway'*/
 
 body {
 	min-width: 350px;
+	margin: 0;
 }
 
 .flex-container {
 	display: flex;
 }
 
-h1 {
+h2 {
 	font-size: 1.3em;
 	font-weight: bolder;
 }
 
-h2 {
+h3 {
 	font-size: 1em;
 	font-weight: bold;
 }
@@ -96,6 +97,10 @@ nav a:hover {
 
 /* Search box */
 
+form div {
+	white-space: nowrap;
+}
+
 form label {
 	font-size: 0.8em;
 	background-color: #F2F2F2;
@@ -114,6 +119,7 @@ input[type=search] {
 	border: 1px solid #F2F2F2;
 	position: relative;
 	right: 5px;
+	font-family: inherit;
 }
 
 input[type=search]:focus {
@@ -130,10 +136,10 @@ button[type=submit] {
 	right: 10px;
 }
 
-::placeholder {
+input::placeholder {
 	color: black;
 	font-weight: bold;
-	font-family: 'railway';
+	font-family: 'raleway';
 	opacity: 1; /* for Firefox */
 }
 
@@ -170,7 +176,7 @@ button[type=submit] {
 #filtres div.filtre-cell:hover {
 	background-color: #0065FC;
 	color: white;
-	border: 2px solid #0065FC;
+	border: 2px solid #DEEBFF;
 }
 
 .filtre-cell * {
@@ -323,7 +329,7 @@ i[class="fas fa-chart-line"] {
 	height: auto;
 }
 
-.cell-2  h2 {
+.cell-2  h3 {
 	margin: 10px 0 5px 12px;
 }
 
@@ -336,7 +342,7 @@ i[class="fas fa-chart-line"] {
 	left: 12px;
 }
 
-#hebergements h2 {
+#hebergements h3 {
 	margin-top: 1.5em;
 }
 
@@ -348,7 +354,7 @@ i[class="fas fa-chart-line"] {
 	padding: 0px 4% 0px 4%;
 }
 
-#activites h1 {
+#activites h2 {
 	margin-left: 15px;
 }
 
@@ -383,7 +389,7 @@ i[class="fas fa-chart-line"] {
 	height: auto;
 }
 
-#activites h2 {
+#activites h3 {
 	display: flex;
 	height: 50px;
 	min-height: 50px;
@@ -444,14 +450,28 @@ footer {
 		border-top: none;
 		border-bottom: 3px solid #F2F2F2;
 	}
+	form {
+		margin-top: 40px
+	}
+	form label {
+		font-size: 1em;
+		padding: 12px 20px 14px 20px;
+		border-radius: 15px 0px 0px 15px;
+	}
+	input {
+		width: 68%;
+		height: 45px;
+		position: relative;
+	}
 	button#search_text {
 		display: none;
 	}
 	button#search_icon {
 		display: inline-block;
 		border-radius: 10px;
+		padding: 15px;
 		position: relative;
-		right: 15px;
+		right: 20px;
 	}
 	/*page sections*/
 	#block_page_1 {
